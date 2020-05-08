@@ -1,5 +1,6 @@
 # tadaathemes 0.0.1
 
+* Add font loading mechanism akin to `hrbrthemes` to startup (adds `extrafont` dependency).
 * Add `vignette("tadaa-themes")` to display all implemented themes with example plot. More plots to come to show different `geom`s.
 * Add `theme_tadaa`
 * Add `theme_tadaark`

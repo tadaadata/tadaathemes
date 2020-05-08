@@ -19,7 +19,8 @@ URL: https://github.com/tadaadata/tadaathemes,
 BugReports: https://github.com/tadaadata/tadaathemes/issues
 Imports: 
     ggplot2,
-    magrittr
+    magrittr,
+    extrafont
 Suggests: 
     knitr,
     rmarkdown

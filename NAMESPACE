@@ -2,5 +2,7 @@
 
 export("%>%")
 export(theme_readthedown)
+export(theme_tadaa)
+export(theme_tadaark)
 import(ggplot2)
 importFrom(magrittr,"%>%")

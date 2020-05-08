@@ -1,3 +1,8 @@
+# tadaathemes 0.0.1
+
+* Add `theme_tadaa`
+* Add `theme_tadaark`
+
 # tadaathemes 0.0.0.9000
 
 * Add `theme_readthedown` from `tadaatoolbox` as a starter.

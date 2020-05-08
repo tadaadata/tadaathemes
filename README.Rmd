@@ -48,7 +48,7 @@ Include a (compact?) gallery of themes (or maybe move them to a dedicated pkgdow
 - [wilkelab/cowplot](https://github.com/wilkelab/cowplot): Just generally useful.
 - [thomasp85/patchwork](https://github.com/thomasp85/patchwork): For plot layouts.
 
-### Themes / Theming
+### Themes
 
 - [hrbrmstr/hrbrthemes](https://github.com/hrbrmstr/hrbrthemes): For the *good stuff*.
 - [hrbrmstr/ggexpanse](https://github.com/hrbrmstr/ggexpanse): Everyone needs more The Expanse.
@@ -68,7 +68,7 @@ Include a (compact?) gallery of themes (or maybe move them to a dedicated pkgdow
 ### Colors
 
 - [sjmgarnier/viridisLite](https://github.com/sjmgarnier/viridisLite): Viridis is the (at least my) preferred set of color scales for continuous variables
-- [coolors](https://coolors.co/): Make your own color palettes easily (up to 5, therefore only useful for qualitative palettes etc.).
+- [coolors](https://coolors.co/): Make your own color palettes easily (useful for qualitative palettes etc.).
 
 ### Plotting *with fonts* (and text stuff)
 

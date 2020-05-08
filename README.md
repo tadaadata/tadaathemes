@@ -47,7 +47,7 @@ dedicated pkgdown article)
   - [thomasp85/patchwork](https://github.com/thomasp85/patchwork): For
     plot layouts.
 
-### Themes / Theming
+### Themes
 
   - [hrbrmstr/hrbrthemes](https://github.com/hrbrmstr/hrbrthemes): For
     the *good stuff*.
@@ -80,7 +80,7 @@ dedicated pkgdown article)
     Viridis is the (at least my) preferred set of color scales for
     continuous variables
   - [coolors](https://coolors.co/): Make your own color palettes easily
-    (up to 5, therefore only useful for qualitative palettes etc.).
+    (useful for qualitative palettes etc.).
 
 ### Plotting *with fonts* (and text stuff)
 

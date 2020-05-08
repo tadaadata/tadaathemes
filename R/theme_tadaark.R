@@ -35,7 +35,7 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
   # baseline
   linecolor <- "#4d4d4d"
   textcolor <- "#d9d9d9"
-  layout <- theme_classic(base_family = "Klavika Regular")
+  layout <- theme_classic(base_family = "Roboto Condensed")
   layout <- layout + theme(
     text = element_text(
       size = text.size,

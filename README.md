@@ -44,6 +44,8 @@ dedicated pkgdown article)
     Another RStudio addin
   - [wilkelab/cowplot](https://github.com/wilkelab/cowplot): Just
     generally useful.
+  - [thomasp85/patchwork](https://github.com/thomasp85/patchwork): For
+    plot layouts.
 
 ### Themes / Theming
 
@@ -52,6 +54,8 @@ dedicated pkgdown article)
   - [hrbrmstr/ggexpanse](https://github.com/hrbrmstr/ggexpanse):
     Everyone needs more The Expanse.
   - [cttobin/ggthemr](https://github.com/cttobin/ggthemr):
+  - [jrnold/ggthemes](https://github.com/jrnold/ggthemes): A classic
+    collection of themes.
   - [delabj/ggCyberPunk](https://github.com/delabj/ggCyberPunk): For the
     cyberpunk aesthetic.
   - [briandconnelly/lato](https://github.com/briandconnelly/lato):

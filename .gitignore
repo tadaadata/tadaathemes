@@ -392,3 +392,4 @@ docs
 inst/doc
 README.html
 .vscode
+dev.R

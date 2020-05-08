@@ -20,3 +20,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/tadaadata/tadaathemes
+BugReports: https://github.com/tadaadata/tadaathemes/issues

@@ -25,11 +25,12 @@
 #' p + theme_tadaark()
 theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "top",
                           show.axis = FALSE, show.grid = TRUE,
-                          plot.margin = c(.8, .4, .4, .8)) {
+                          plot.margin = c(.8, .4, .4, .8),
+                          base_family = "Roboto Condensed") {
   # baseline
   linecolor <- "#4d4d4d"
   textcolor <- "#d9d9d9"
-  layout <- theme_classic(base_family = "Roboto Condensed")
+  layout <- theme_classic(base_family = base_family)
   layout <- layout + theme(
     text = element_text(
       size = text.size,

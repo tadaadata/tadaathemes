@@ -15,5 +15,34 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-# library(tadaathemes)
+library(ggplot2)
+library(tadaathemes)
+
+# List all themes in package
+pkg_themes <- getNamespaceExports("tadaathemes")
+pkg_themes <- sort(pkg_themes[grepl("^theme\\_", pkg_themes)])
+
+# Make a plot with a theme provided as character argument
+plot_with_theme <- function(p = NULL, theme = "theme_minimal") {
+  
+  this_theme <- eval(parse(text = theme))
+
+  if (is.null(p)) {
+    p <- ggplot(iris, aes(x = Sepal.Width)) +
+    geom_histogram(binwidth = .25) +
+    labs(
+      title = "Yet another iris plot",
+      subtitle = paste("Using", theme),
+      caption = "Oh hi there, didn't see you walk in"
+    )
+  }
+  p + this_theme()
+}
 ```
+
+```{r themes, fig.height=4.3, fig.width=7,fig.align='center'}
+for (theme in pkg_themes) {
+  print(plot_with_theme(theme = theme))
+}
+```
+

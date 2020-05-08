@@ -25,7 +25,6 @@
 #'   )
 #'
 #' p + theme_readthedown()
-#'
 #' \dontrun{
 #' # These may require font installation
 #' p + theme_readthedown(base_family = "Lato")
@@ -71,8 +70,6 @@ theme_readthedown <- function(base_size = 12, base_family = "",
         panel.grid.major.y = element_line(size = .1, color = "black"),
         panel.grid.minor.y = element_line(size = .1, color = "black", linetype = "dotted")
       )
-  } else if (axis_emph == "" | is.null(axis_emph)) {
   }
-
   result
 }

@@ -44,7 +44,6 @@ p <- ggplot(iris, aes(x = Sepal.Width)) +
   )
 
 p + theme_readthedown()
-
 \dontrun{
 # These may require font installation
 p + theme_readthedown(base_family = "Lato")

@@ -1,5 +1,5 @@
 Package: tadaathemes
-Title: Neato 'ggplot2' Themes.
+Title: Neato 'ggplot2' Themes
 Version: 0.0.1
 Authors@R: 
     c(person(given = "Lukas",

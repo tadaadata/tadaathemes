@@ -6,7 +6,7 @@
   load_fonts <- getOption("hrbrthemes.loadfonts", default = FALSE) |
     getOption("tadaathemes.loadfonts", default = FALSE)
 
-  if (.Platform$OS.type == "windows")  { # nocov start
+  if (.Platform$OS.type == "windows") {
     if (interactive()) packageStartupMessage("Registering Windows fonts with R")
     extrafont::loadfonts("win", quiet = TRUE)
   }
@@ -16,5 +16,4 @@
     extrafont::loadfonts("pdf", quiet = TRUE)
     extrafont::loadfonts("postscript", quiet = TRUE)
   }
-
 }

@@ -4,7 +4,7 @@
 \name{tadaathemes-package}
 \alias{tadaathemes}
 \alias{tadaathemes-package}
-\title{tadaathemes: Neato 'ggplot2' Themes.}
+\title{tadaathemes: Neato 'ggplot2' Themes}
 \description{
 A collection of ggplot2 themes for personal use
     across various applications.

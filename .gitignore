@@ -390,3 +390,5 @@ $RECYCLE.BIN/
 .Rproj.user
 docs
 inst/doc
+README.html
+.vscode

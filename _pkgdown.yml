@@ -1,0 +1,24 @@
+development:
+  mode: auto
+  destination: "."
+
+home:
+  title: Neato themes for your ggplot2 needs
+  description: >
+    Because one can never have enough themes.
+
+template:
+  params:
+    bootswatch: flatly
+  opengraph:
+    image:
+      src: "man/figures/logo.png"
+      alt: "Hex sticker showing the package logo"
+    twitter:
+      creator: "@tadaa_data"
+      # site: "@tadaa_data"
+      card: summary_large_image # summary
+
+authors:
+  Lukas Burk:
+    href: https://jemu.name

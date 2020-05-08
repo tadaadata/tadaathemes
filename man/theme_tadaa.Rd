@@ -14,20 +14,24 @@ theme_tadaa(
 )
 }
 \arguments{
-\item{title.size}{title element size in pts}
+\item{title.size}{title element size in pts.}
 
-\item{text.size}{text element size in pts}
+\item{text.size}{text element size in pts.}
 
-\item{legend.position}{either one of "none", "left", "right", "bottom", "top"}
+\item{legend.position}{either one of "none", "left", "right", "bottom", "top".}
 
-\item{show.axis}{boolean or "x", "y"; should axis be drawn? Which?}
+\item{show.axis}{boolean or "x", "y"; should axis be drawn? Which?.}
 
-\item{show.grid}{boolean; should grid lines be drawn?}
+\item{show.grid}{boolean; should grid lines be drawn?.}
 
-\item{plot.margin}{margin around entire plot (unit with the sizes of the top, right, bottom, and left margins)}
+\item{plot.margin}{margin around entire plot (unit with the sizes of the
+top, right, bottom, and left margins).}
 }
 \description{
 Official tadaa-data ggplot2 theme (for now)
+}
+\note{
+Use \code{\link[hrbrthemes:import_roboto_condensed]{hrbrthemes::import_roboto_condensed()}} to install Roboto Condensed.
 }
 \examples{
 library(ggplot2)

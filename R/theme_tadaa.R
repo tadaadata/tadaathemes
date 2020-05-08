@@ -1,14 +1,16 @@
 #' Official tadaa-data ggplot2 theme (for now)
 #'
-#' @param title.size title element size in pts
-#' @param text.size text element size in pts
-#' @param legend.position either one of "none", "left", "right", "bottom", "top"
-#' @param show.axis boolean or "x", "y"; should axis be drawn? Which?
-#' @param show.grid boolean; should grid lines be drawn?
-#' @param plot.margin margin around entire plot (unit with the sizes of the top, right, bottom, and left margins)
+#' @param title.size title element size in pts.
+#' @param text.size text element size in pts.
+#' @param legend.position either one of "none", "left", "right", "bottom", "top".
+#' @param show.axis boolean or "x", "y"; should axis be drawn? Which?.
+#' @param show.grid boolean; should grid lines be drawn?.
+#' @param plot.margin margin around entire plot (unit with the sizes of the
+#' top, right, bottom, and left margins).
 #'
 #' @import ggplot2
 #' @export
+#' @note Use [`hrbrthemes::import_roboto_condensed()`] to install Roboto Condensed.
 #' @examples
 #' library(ggplot2)
 #' p <- ggplot(iris, aes(x = Sepal.Width)) +

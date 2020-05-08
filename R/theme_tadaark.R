@@ -7,15 +7,9 @@
 #' `ggplot2::update_geom_defaults`, which, unfortunately, is rather complicated
 #' to undo. One easy but blunt way is to restart your R session.
 #'
-#' @param title.size title element size in pts
-#' @param text.size text element size in pts
-#' @param legend.position either one of "none", "left", "right", "bottom", "top"
-#' @param show.axis boolean or "x", "y"; should axis be drawn? Which?
-#' @param show.grid boolean; should grid lines be drawn?
-#' @param plot.margin margin around entire plot (unit with the sizes of the top, right, bottom, and left margins)
-#'
+#' @inheritParams theme_tadaa
 #' @references https://twitter.com/jburnmurdoch/status/1231235675229491200
-#'
+#' @note Use [`hrbrthemes::import_roboto_condensed()`] to install Roboto Condensed.
 #' @import ggplot2
 #' @export
 #' @examples

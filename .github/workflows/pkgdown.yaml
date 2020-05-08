@@ -8,6 +8,7 @@ on:
       - "NEWS.md"
       - "README.Rmd"
       - "vignettes"
+      - ".github/workflows/pkgdown.yaml"
 
 name: pkgdown
 

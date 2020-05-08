@@ -6,6 +6,7 @@ on:
       - "R/*"
       - "NAMESPACE"
       - "tests/**"
+      - ".github/workflows/R-CMD-check.yaml"
   pull_request:
     branches:
       - master

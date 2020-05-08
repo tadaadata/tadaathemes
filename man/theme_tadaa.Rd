@@ -29,3 +29,15 @@ theme_tadaa(
 \description{
 Official tadaa-data ggplot2 theme (for now)
 }
+\examples{
+library(ggplot2)
+p <- ggplot(iris, aes(x = Sepal.Width)) +
+  geom_histogram(binwidth = .25) +
+  labs(
+    title = "Yet another iris plot",
+    subtitle = "Using theme_tadaa",
+    caption = "Oh hi there, didn't see you walk in"
+  )
+
+p + theme_tadaa()
+}

@@ -35,6 +35,18 @@ Using this function changes the default color for many geoms via
 \code{ggplot2::update_geom_defaults}, which, unfortunately, is rather complicated
 to undo. One easy but blunt way is to restart your R session.
 }
+\examples{
+library(ggplot2)
+p <- ggplot(iris, aes(x = Sepal.Width)) +
+  geom_histogram(binwidth = .25) +
+  labs(
+    title = "Yet another iris plot",
+    subtitle = "Using theme_tadaark",
+    caption = "Oh hi there, didn't see you walk in"
+  )
+
+p + theme_tadaark()
+}
 \references{
 https://twitter.com/jburnmurdoch/status/1231235675229491200
 }

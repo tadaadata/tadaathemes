@@ -1,24 +1,31 @@
 Package: tadaathemes
-Title: What the Package Does (One Line, Title Case)
+Title: Neato 'ggplot2' Themes.
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Lukas",
-           family = "Burk",
-           role = c("aut", "cre"),
-           email = "lukas@tadaa-data.de",
-           comment = c(ORCID = "0000-0001-7528-3795"))
-Description: What the package does (one paragraph).
+    c(person(given = "Lukas",
+             family = "Burk",
+             role = c("aut", "cre"),
+             email = "lukas@tadaa-data.de",
+             comment = c(ORCID = "0000-0001-7528-3795")),
+      person(given = "Tobias",
+             family = "Anton",
+             role = c("aut"),
+             email = "tobi@tadaa-data.de"))
+Description: A collection of ggplot2 themes for personal use
+    across various applications.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+URL: https://github.com/tadaadata/tadaathemes,
+    https://tadaadata.github.io/tadaathemes
+BugReports: https://github.com/tadaadata/tadaathemes/issues
 Imports: 
     ggplot2,
     magrittr
 Suggests: 
     knitr,
     rmarkdown
-VignetteBuilder: knitr
-URL: https://github.com/tadaadata/tadaathemes
-BugReports: https://github.com/tadaadata/tadaathemes/issues
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0

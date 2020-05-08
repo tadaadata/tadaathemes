@@ -4,20 +4,27 @@
 \name{tadaathemes-package}
 \alias{tadaathemes}
 \alias{tadaathemes-package}
-\title{tadaathemes: What the Package Does (One Line, Title Case)}
+\title{tadaathemes: Neato 'ggplot2' Themes.}
 \description{
-What the package does (one paragraph).
+A collection of ggplot2 themes for personal use
+    across various applications.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/tadaadata/tadaathemes}
+  \item \url{https://tadaadata.github.io/tadaathemes}
   \item Report bugs at \url{https://github.com/tadaadata/tadaathemes/issues}
 }
 
 }
 \author{
 \strong{Maintainer}: Lukas Burk \email{lukas@tadaa-data.de} (\href{https://orcid.org/0000-0001-7528-3795}{ORCID})
+
+Authors:
+\itemize{
+  \item Tobias Anton \email{tobi@tadaa-data.de}
+}
 
 }
 \keyword{internal}

@@ -22,3 +22,12 @@ template:
 authors:
   Lukas Burk:
     href: https://jemu.name
+
+reference:
+- title: Themes
+  subtitle: These are themes. They are *quite* themey.
+  contents:
+   - starts_with("theme_")
+- title: This package
+  contents:
+    - tadaathemes

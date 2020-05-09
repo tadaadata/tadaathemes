@@ -4,4 +4,7 @@ if (interactive()) {
   suppressMessages(require(tadaathemes))
 }
 
-options(tadaathemes.loadfonts = TRUE)
+options(
+  tadaathemes.loadfonts = FALSE,
+  hrbrthemes.loadfonts = FALSE
+)

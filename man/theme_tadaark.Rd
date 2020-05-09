@@ -10,7 +10,8 @@ theme_tadaark(
   legend.position = "top",
   show.axis = FALSE,
   show.grid = TRUE,
-  plot.margin = c(0.8, 0.4, 0.4, 0.8)
+  plot.margin = c(0.8, 0.4, 0.4, 0.8),
+  font.base = "Roboto Condensed"
 )
 }
 \arguments{
@@ -26,6 +27,8 @@ theme_tadaark(
 
 \item{plot.margin}{margin around entire plot (unit with the sizes of the
 top, right, bottom, and left margins).}
+
+\item{font.base}{The base font, defaulting to \code{"Roboto Condensed"}.}
 }
 \description{
 Because, according to Financial Times Datavizard John Burn-Murdoch,

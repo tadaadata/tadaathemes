@@ -1,36 +1,54 @@
-#' Official dark tadaa-data ggplot2 theme (for now)
-#'
-#' Because, according to Financial Times Datavizard John Burn-Murdoch,
-#' "they look cool".
+#' Theme Matching trakt.tv (Dark Knight Mode)
 #'
 #' @details Using this function changes the default color for many geoms via
 #' `ggplot2::update_geom_defaults`, which, unfortunately, is rather complicated
 #' to undo. One easy but blunt way is to restart your R session.
 #'
 #' @inheritParams theme_tadaa
-#' @references https://twitter.com/jburnmurdoch/status/1231235675229491200
-#' @note Use [`hrbrthemes::import_roboto_condensed()`] to install Roboto Condensed.
+#' @param font.base,font.title,font.caption,font.subtitle Default font
+#' family is `"Lato"`, but trakt.tv uses `"Proxima Nova Semibold"` -
+#' which is a neat font, but I can neither afford nor supply it with this package.
+#' @note See [`sysfonts::font_add_google`] and the `showtext` package to add
+#' the Lato font.
 #' @import ggplot2
 #' @export
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #' p <- ggplot(iris, aes(x = Sepal.Width)) +
 #'   geom_histogram(binwidth = .25) +
 #'   labs(
 #'     title = "Yet another iris plot",
-#'     subtitle = "Using theme_tadaark",
+#'     subtitle = "Using theme_trakt",
 #'     caption = "Oh hi there, didn't see you walk in"
 #'   )
 #'
-#' p + theme_tadaark()
-theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "top",
-                          show.axis = FALSE, show.grid = TRUE,
-                          plot.margin = c(.8, .4, .4, .8),
-                          font.base = "Roboto Condensed") {
+#' p + theme_trakt()
+#'
+#' p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+#' geom_line(stat = "smooth", method = lm, formula = y ~ x) +
+#'   geom_point(size = 2) +
+#'   labs(
+#'     title = "The ggplot we've all seen",
+#'     subtitle = "Using theme_trakt",
+#'     x = "Weight", y = "Miles per Gallon",
+#'     color = "Gears", caption = "I am also here!"
+#'   )
+#' p + theme_trakt()
+#' }
+theme_trakt <- function(title.size = 16, text.size = 14, legend.position = "top",
+                        show.axis = FALSE, show.grid = TRUE,
+                        plot.margin = c(.7, .7, .7, .7),
+                        font.base = "Lato Regular",
+                        font.title = "Lato Semibold",
+                        font.subtitle = "Lato Regular",
+                        font.caption = "Lato Light") {
   # baseline
-  linecolor <- "#4d4d4d"
-  textcolor <- "#d9d9d9"
-  layout <- theme_classic(base_family = font.base)
+  linecolor <- "#999999"
+  textcolor <- "#FFFFFF"
+  layout <- theme_classic(
+    base_family = font.base,
+  )
   layout <- layout + theme(
     text = element_text(
       size = text.size,
@@ -38,7 +56,7 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
     ),
     title = element_text(
       size = title.size,
-      face = "bold",
+      face = "plain",
       color = textcolor
     ),
     line = element_line(
@@ -48,7 +66,7 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
   )
 
   # override geom defaults
-  new_def <- "#00b0a0"
+  new_def <- "#EA212D"
   update_geom_defaults("point", list(colour = new_def))
   update_geom_defaults("line", list(colour = new_def))
   update_geom_defaults("area", list(
@@ -74,7 +92,8 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
   update_geom_defaults("text", list(colour = new_def))
 
   # axis
-  layout <- layout + theme(axis.line = element_line(color = "#d9d9d9"))
+  layout <- layout + theme(axis.line = element_line(color = "#999999"))
+
   if (inherits(show.axis, "character") | show.axis == FALSE) {
     if (inherits(show.axis, "character")) {
       show.axis <- tolower(show.axis)
@@ -95,25 +114,58 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
   # grid lines
   if (show.grid == TRUE) {
     layout <- layout + theme(panel.grid.major = element_line(
-      size = .2,
+      size = .05,
       color = linecolor,
-      linetype = "dotted"
+      linetype = "solid"
     ))
   }
 
+  # title
+  layout <- layout + theme(plot.title = element_text(
+    family = font.title,
+    #face = "plain",
+    color = "#FFFFFF"
+  )
+  )
+
   # subtitle
   layout <- layout + theme(plot.subtitle = element_text(
-    face = "plain",
-    color = "#8c8c8c"
+    family = font.subtitle,
+    #face = "plain",
+    color = "#999999",
+    margin = margin(b = 15),
+    # debug = TRUE
+  ))
+
+  # caption
+  layout <- layout + theme(plot.caption = element_text(
+    family = font.caption,
+    size = text.size - 2,
+    #face = "plain",
+    color = "#999999",
+    margin = margin(t = 5)
   ))
 
   # axis titles
-  layout <- layout + theme(axis.title.x = element_text(margin = margin(t = 8)))
+  layout <- layout + theme(
+    axis.title = element_text(
+      size = text.size
+    ),
+    axis.title.x = element_text(
+      margin = margin(t = 10),
+      hjust = 1
+    ),
+    axis.title.y = element_text(
+      margin = margin(r = 10, t = 5),
+      hjust = 1,
+      debug = FALSE
+    )
+  )
 
   # axis labels
   layout <- layout + theme(axis.text = element_text(
     face = "plain",
-    color = "#8c8c8c"
+    color = "#999999"
   ))
 
   # legend
@@ -135,8 +187,8 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
 
   # misc
   layout <- layout + theme(
-    panel.background = element_rect(fill = "#181818"),
-    plot.background = element_rect(fill = "#181818"), # or: #1a1a1a; OR #191919?!
+    panel.background = element_rect(fill = "#1D1D1D"),
+    plot.background = element_rect(fill = "#1D1D1D"),
     plot.margin = unit(plot.margin, "cm")
   )
 

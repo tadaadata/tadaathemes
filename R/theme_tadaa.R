@@ -7,7 +7,7 @@
 #' @param show.grid boolean; should grid lines be drawn?.
 #' @param plot.margin margin around entire plot (unit with the sizes of the
 #' top, right, bottom, and left margins).
-#' @param base_family The base font, defaulting to `"Roboto Condensed"`.
+#' @param font.base The base font, defaulting to `"Roboto Condensed"`.
 #'
 #' @import ggplot2
 #' @export
@@ -26,9 +26,9 @@
 theme_tadaa <- function(title.size = 16, text.size = 14, legend.position = "top",
                         show.axis = FALSE, show.grid = TRUE,
                         plot.margin = c(.8, .4, .4, .8),
-                        base_family = "Roboto Condensed") {
+                        font.base = "Roboto Condensed") {
   # baseline
-  layout <- theme_classic(base_family = base_family)
+  layout <- theme_classic(base_family = font.base)
   layout <- layout + theme(
     text = element_text(size = text.size),
     title = element_text(

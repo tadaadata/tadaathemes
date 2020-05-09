@@ -43,6 +43,7 @@ to undo. One easy but blunt way is to restart your R session.
 Use \code{\link[hrbrthemes:import_roboto_condensed]{hrbrthemes::import_roboto_condensed()}} to install Roboto Condensed.
 }
 \examples{
+\dontrun{
 library(ggplot2)
 p <- ggplot(iris, aes(x = Sepal.Width)) +
   geom_histogram(binwidth = .25) +
@@ -53,6 +54,7 @@ p <- ggplot(iris, aes(x = Sepal.Width)) +
   )
 
 p + theme_tadaark()
+}
 }
 \references{
 https://twitter.com/jburnmurdoch/status/1231235675229491200

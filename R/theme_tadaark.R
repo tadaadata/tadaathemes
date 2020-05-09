@@ -13,6 +13,7 @@
 #' @import ggplot2
 #' @export
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #' p <- ggplot(iris, aes(x = Sepal.Width)) +
 #'   geom_histogram(binwidth = .25) +
@@ -23,6 +24,7 @@
 #'   )
 #'
 #' p + theme_tadaark()
+#' }
 theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "top",
                           show.axis = FALSE, show.grid = TRUE,
                           plot.margin = c(.8, .4, .4, .8),

@@ -8,3 +8,4 @@
 ^README\.html$
 ^\.vscode$
 ^dev\.R$
+^\.travis\.yml$

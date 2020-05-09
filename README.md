@@ -11,6 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://github.com/tadaadata/tadaathemes/workflows/R-CMD-check/badge.svg)](https://github.com/tadaadata/tadaathemes/actions)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tadaathemes)](https://CRAN.R-project.org/package=tadaathemes)
+[![Travis build
+status](https://travis-ci.com/tadaadata/tadaathemes.svg?branch=master)](https://travis-ci.com/tadaadata/tadaathemes)
 <!-- badges: end -->
 
 The goal of tadaathemes is to provide a bunch of reasonably neat ggplot2

@@ -1,6 +1,6 @@
 #' Import Lato font for use in charts
 #'
-#' Lato is Copyright (c) 2010-2014, \\u0141ukasz Dziedzic,
+#' Lato is Copyright (c) 2010-2014, Łukasz Dziedzic,
 #' with Reserved Font Name Lato ([License](https://www.fontsquirrel.com/license/lato)).
 #' You can find it on [Google Fonts](https://fonts.google.com/specimen/Lato).
 #'
@@ -10,6 +10,7 @@
 #' to register non-core fonts with the Windows graphics device.
 #'
 #' @name Lato
+#' @encoding UTF-8
 #' @note This will take care of ensuring PDF/PostScript usage. The location of the
 #'   font directory is displayed after the base import is complete. It is highly
 #'   recommended that you install them on your system the same way you would any
@@ -54,18 +55,6 @@ font_lato_light <- "Lato Light"
 
 #' @rdname Lato
 #' @md
-#' @description `font_lato_thin` == "`Lato Thin`"
-#' @export
-font_lato_thin <- "Lato Thin"
-
-#' @rdname Lato
-#' @md
 #' @description `font_lato_semibold` == "`Lato Semibold`"
 #' @export
 font_lato_semibold <- "Lato Semibold"
-
-#' @rdname Lato
-#' @md
-#' @description `font_lato_heavy` == "`Lato Heavy`"
-#' @export
-font_lato_heavy <- "Lato Heavy"

@@ -27,7 +27,12 @@ reference:
 - title: Themes
   subtitle: These are themes. They are *quite* themey.
   contents:
-   - starts_with("theme_")
+    - starts_with("theme_")
+- title: Fonts
+  subtitle: Bundled fonts and import helpers
+  contents:
+    - starts_with("import_")
+    - starts_with("font_")
 - title: This package
   contents:
     - tadaathemes

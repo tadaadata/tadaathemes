@@ -10,10 +10,10 @@ home:
 template:
   params:
     bootswatch: flatly
-  opengraph:
-    image:
-      src: "man/figures/logo.png"
-      alt: "Hex sticker showing the package logo"
+  # opengraph:
+  #   image:
+  #     src: "man/figures/logo.png"
+  #     alt: "Hex sticker showing the package logo"
     twitter:
       creator: "@tadaa_data"
       # site: "@tadaa_data"

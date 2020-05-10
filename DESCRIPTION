@@ -9,7 +9,7 @@ Authors@R:
              comment = c(ORCID = "0000-0001-7528-3795")),
       person(given = "Tobias",
              family = "Anton",
-             role = c("aut"),
+             role = "aut",
              email = "tobi@tadaa-data.de"))
 Description: A collection of ggplot2 themes for personal use
     across various applications.
@@ -18,12 +18,14 @@ URL: https://github.com/tadaadata/tadaathemes,
     https://tadaadata.github.io/tadaathemes
 BugReports: https://github.com/tadaadata/tadaathemes/issues
 Imports: 
+    extrafont,
     ggplot2,
     magrittr,
-    extrafont
+    sysfonts
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    showtext
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

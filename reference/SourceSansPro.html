@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • tadaathemes</title>
+<title>Import Source Sans font for use in charts — SourceSansPro • tadaathemes</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,12 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Import Source Sans font for use in charts — SourceSansPro" />
+<meta property="og:description" content="Source Sans Pro is Copyright 2010, 2012 Adobe Systems Incorporated
+(http://www.adobe.com/), with Reserved Font Name ‘Source’.
+(License).
+You can find it on Google Fonts.
+font_ssp == &quot;Source Sans Pro&quot; etc." />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the package logo" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -63,7 +68,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -127,35 +132,61 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/tadaadata/tadaathemes/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Import Source Sans font for use in charts</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tadaadata/tadaathemes/blob/master/R/font-source-sans-pro.R'><code>R/font-source-sans-pro.R</code></a></small>
+    <div class="hidden name"><code>SourceSansPro.Rd</code></div>
     </div>
 
-    <div id="tadaathemes-001" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.1">
-<a href="#tadaathemes-001" class="anchor"></a>tadaathemes 0.0.1</h1>
-<ul>
-<li>Bundle fonts Source Sans Pro and Lato (experimentally). The latter is used in <code><a href="../reference/theme_trakt.html">theme_trakt()</a></code>.</li>
-<li>Add WIP implementation of <code><a href="../reference/theme_trakt.html">theme_trakt()</a></code>
-</li>
-<li>Add font loading mechanism akin to <code>hrbrthemes</code> to startup (adds <code>extrafont</code> dependency).</li>
-<li>Add <code><a href="../articles/tadaa-themes.html">vignette("tadaa-themes")</a></code> to display all implemented themes with example plot. More plots to come to show different <code>geom</code>s.</li>
-<li>Add <code><a href="../reference/theme_tadaa.html">theme_tadaa()</a></code>
-</li>
-<li>Add <code><a href="../reference/theme_tadaark.html">theme_tadaark()</a></code>
-</li>
-<li>Add <code><a href="../reference/theme_readthedown.html">theme_readthedown()</a></code> from <code>tadaatoolbox</code> as a starter.</li>
-<li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Source Sans Pro is Copyright 2010, 2012 Adobe Systems Incorporated
+(http://www.adobe.com/), with Reserved Font Name ‘Source’.
+(<a href='https://www.fontsquirrel.com/license/source-sans-pro'>License</a>).
+You can find it on <a href='https://fonts.google.com/specimen/Source+Sans+Pro'>Google Fonts</a>.</p>
+<p><code>font_ssp</code> == "<code>Source Sans Pro</code>" etc.</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>import_source_sans</span>()
+
+<span class='no'>font_ssp</span>
+
+<span class='no'>font_ssp_semibold</span>
+
+<span class='no'>font_ssp_bold</span>
+
+<span class='no'>font_ssp_black</span>
+
+<span class='no'>font_ssp_light</span>
+
+<span class='no'>font_ssp_extralight</span></pre>
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>length 1 character vector</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This will add the fonts via <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add.html'>sysfonts::font_add</a></code>, use
+<code><a href='https://rdrr.io/pkg/showtext/man/showtext_auto.html'>showtext::showtext_auto()</a></code> to use the fonts. Other steps may be necessary.
+Since this is an .otf fonts, and other fonts commonly bundled / used with R
+packages (e.g. <code>hrbrthemes</code>) are .ttf fonts, this needs to be handled
+differently, meaning that <code><a href='https://rdrr.io/pkg/extrafont/man/font_import.html'>extrafont::font_import()</a></code> will not work.
+I am currently not sure which steps specifically are required for this to work,
+but at least I can bundle the fonts for easier import.</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Fonts are hard and platform-compatible font usage is hard to debug.</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

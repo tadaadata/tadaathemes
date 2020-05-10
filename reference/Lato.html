@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • tadaathemes</title>
+<title>Import Lato font for use in charts — Lato • tadaathemes</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,16 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Import Lato font for use in charts — Lato" />
+<meta property="og:description" content="Lato is Copyright (c) 2010-2014, \u0141ukasz Dziedzic,
+with Reserved Font Name Lato (License).
+You can find it on Google Fonts.
+font_lato == &quot;Lato&quot; (&quot;Regular&quot;)
+font_lato_bold == &quot;Lato Bold&quot;
+font_lato_light == &quot;Lato Light&quot;
+font_lato_thin == &quot;Lato Thin&quot;
+font_lato_semibold == &quot;Lato Semibold&quot;
+font_lato_heavy == &quot;Lato Heavy&quot;" />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the package logo" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -63,7 +72,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -127,35 +136,65 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/tadaadata/tadaathemes/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Import Lato font for use in charts</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tadaadata/tadaathemes/blob/master/R/font-lato.R'><code>R/font-lato.R</code></a></small>
+    <div class="hidden name"><code>Lato.Rd</code></div>
     </div>
 
-    <div id="tadaathemes-001" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.1">
-<a href="#tadaathemes-001" class="anchor"></a>tadaathemes 0.0.1</h1>
-<ul>
-<li>Bundle fonts Source Sans Pro and Lato (experimentally). The latter is used in <code><a href="../reference/theme_trakt.html">theme_trakt()</a></code>.</li>
-<li>Add WIP implementation of <code><a href="../reference/theme_trakt.html">theme_trakt()</a></code>
-</li>
-<li>Add font loading mechanism akin to <code>hrbrthemes</code> to startup (adds <code>extrafont</code> dependency).</li>
-<li>Add <code><a href="../articles/tadaa-themes.html">vignette("tadaa-themes")</a></code> to display all implemented themes with example plot. More plots to come to show different <code>geom</code>s.</li>
-<li>Add <code><a href="../reference/theme_tadaa.html">theme_tadaa()</a></code>
-</li>
-<li>Add <code><a href="../reference/theme_tadaark.html">theme_tadaark()</a></code>
-</li>
-<li>Add <code><a href="../reference/theme_readthedown.html">theme_readthedown()</a></code> from <code>tadaatoolbox</code> as a starter.</li>
-<li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Lato is Copyright (c) 2010-2014, \u0141ukasz Dziedzic,
+with Reserved Font Name Lato (<a href='https://www.fontsquirrel.com/license/lato'>License</a>).
+You can find it on <a href='https://fonts.google.com/specimen/Lato'>Google Fonts</a>.</p>
+<p><code>font_lato</code> == "<code>Lato</code>" ("Regular")</p>
+<p><code>font_lato_bold</code> == "<code>Lato Bold</code>"</p>
+<p><code>font_lato_light</code> == "<code>Lato Light</code>"</p>
+<p><code>font_lato_thin</code> == "<code>Lato Thin</code>"</p>
+<p><code>font_lato_semibold</code> == "<code>Lato Semibold</code>"</p>
+<p><code>font_lato_heavy</code> == "<code>Lato Heavy</code>"</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>import_lato</span>()
+
+<span class='no'>font_lato</span>
+
+<span class='no'>font_lato_bold</span>
+
+<span class='no'>font_lato_light</span>
+
+<span class='no'>font_lato_thin</span>
+
+<span class='no'>font_lato_semibold</span>
+
+<span class='no'>font_lato_heavy</span></pre>
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>length 1 character vector</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+<p>An object of class <code>character</code> of length 1.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>There is an option <code>hrbrthemes.loadfonts</code> which -- if set to <code>TRUE</code> -- will
+call <code><a href='https://rdrr.io/pkg/extrafont/man/loadfonts.html'>extrafont::loadfonts()</a></code> to register non-core fonts with R PDF &amp; PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>This will take care of ensuring PDF/PostScript usage. The location of the
+font directory is displayed after the base import is complete. It is highly
+recommended that you install them on your system the same way you would any
+other font you wish to use in other programs.</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

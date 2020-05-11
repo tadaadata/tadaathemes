@@ -28,8 +28,12 @@ reference:
   subtitle: These are themes. They are *quite* themey.
   contents:
     - starts_with("theme_")
+- title: Color Palettes
+  subtitle: Colors and palettes derived from them with ggplot2 helpers.
+  contents:
+    - starts_with("pal_")
 - title: Fonts
-  subtitle: Bundled fonts and import helpers
+  subtitle: Bundled fonts and import helpers.
   contents:
     - starts_with("import_")
     - starts_with("font_")

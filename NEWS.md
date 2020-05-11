@@ -1,5 +1,6 @@
 # tadaathemes 0.0.1
 
+* Add colors and scale functions for `theme_trakt`.
 * Bundle fonts Source Sans Pro and Lato (experimentally). The latter is used in `theme_trakt()`.
 * Add WIP implementation of `theme_trakt()`
 * Add font loading mechanism akin to `hrbrthemes` to startup (adds `extrafont` dependency).

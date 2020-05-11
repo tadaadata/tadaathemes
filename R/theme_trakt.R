@@ -36,13 +36,16 @@
 #'   )
 #' p + theme_trakt()
 #' }
-theme_trakt <- function(title.size = 16, text.size = 14, legend.position = "top",
-                        show.axis = FALSE, show.grid = TRUE,
-                        plot.margin = c(.7, .7, .7, .7),
-                        font.base = "Lato Regular",
-                        font.title = "Lato Semibold",
-                        font.subtitle = "Lato Regular",
-                        font.caption = "Lato Light") {
+theme_trakt <- function(
+  title.size = 16, text.size = 14, legend.position = "top",
+  show.axis = FALSE, show.grid = TRUE,
+  plot.margin = c(.7, .7, .7, .7),
+  font.base = font_lato,
+  font.title = font_lato_semibold,
+  font.subtitle = font_lato,
+  font.caption = font_lato_light
+  ) {
+
   # baseline
   linecolor <- "#999999"
   textcolor <- "#FFFFFF"
@@ -194,3 +197,41 @@ theme_trakt <- function(title.size = 16, text.size = 14, legend.position = "top"
 
   layout
 }
+
+# Colors ----
+
+#' @rdname pal_trakt
+#' @export
+colors_trakt <- c(
+  "red" = "#EA212D",
+  "darkred" = "#A9262A",
+  "dark" = "#111111",
+  "gray" = "#999999",
+  "white" = "#FFFFFF"
+)
+
+#' Colors matching trakt.tv
+#'
+#' At least its Dark Knight Mode.
+#' @export
+#' @examples
+#' library(scales)
+#' scales::show_col(pal_trakt()(5))
+pal_trakt <- function() { scales::manual_pal(colors_trakt) }
+
+#' Discrete color & fill scales based on the FT palette
+#'
+#' See [pal_trakt()].
+#'
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @rdname pal_trakt
+#' @export
+scale_colour_trakt <- function(...) { ggplot2::discrete_scale("colour", "trakt", pal_trakt(), ...) }
+
+#' @export
+#' @rdname pal_trakt
+scale_color_trakt <- scale_colour_trakt
+
+#' @export
+#' @rdname pal_trakt
+scale_fill_trakt <- function(...) { ggplot2::discrete_scale("fill", "trakt", pal_trakt(), ...) }

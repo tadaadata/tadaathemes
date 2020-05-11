@@ -11,10 +11,10 @@ theme_trakt(
   show.axis = FALSE,
   show.grid = TRUE,
   plot.margin = c(0.7, 0.7, 0.7, 0.7),
-  font.base = "Lato Regular",
-  font.title = "Lato Semibold",
-  font.subtitle = "Lato Regular",
-  font.caption = "Lato Light"
+  font.base = font_lato,
+  font.title = font_lato_semibold,
+  font.subtitle = font_lato,
+  font.caption = font_lato_light
 )
 }
 \arguments{

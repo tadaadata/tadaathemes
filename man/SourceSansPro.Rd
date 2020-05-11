@@ -7,16 +7,10 @@
 \alias{font_ssp}
 \alias{font_ssp_semibold}
 \alias{font_ssp_bold}
-\alias{font_ssp_black}
 \alias{font_ssp_light}
-\alias{font_ssp_extralight}
 \title{Import Source Sans font for use in charts}
 \format{
 length 1 character vector
-
-An object of class \code{character} of length 1.
-
-An object of class \code{character} of length 1.
 
 An object of class \code{character} of length 1.
 
@@ -33,11 +27,7 @@ font_ssp_semibold
 
 font_ssp_bold
 
-font_ssp_black
-
 font_ssp_light
-
-font_ssp_extralight
 }
 \description{
 Source Sans Pro is Copyright 2010, 2012 Adobe Systems Incorporated

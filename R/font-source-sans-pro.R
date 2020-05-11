@@ -23,10 +23,6 @@ import_source_sans <- function() {
   ssans_font_dir <- system.file("fonts", "source-sans-pro", package = "tadaathemes")
 
   sysfonts::font_add(
-    family = "Source Sans Pro ExtraLight",
-    regular = file.path(ssans_font_dir, "SourceSansPro-ExtraLight.otf")
-  )
-  sysfonts::font_add(
     family = "Source Sans Pro Light",
     regular = file.path(ssans_font_dir, "SourceSansPro-Light.otf")
   )
@@ -41,10 +37,6 @@ import_source_sans <- function() {
   sysfonts::font_add(
     family = "Source Sans Pro Bold",
     regular = file.path(ssans_font_dir, "SourceSansPro-Bold.otf")
-  )
-  sysfonts::font_add(
-    family = "Source Sans Pro Black",
-    regular = file.path(ssans_font_dir, "SourceSansPro-Black.otf")
   )
 
   message(
@@ -70,14 +62,7 @@ font_ssp_semibold <- "Source Sans Pro Semibold"
 #' @export
 font_ssp_bold <- "Source Sans Pro Bold"
 
-#' @rdname SourceSansPro
-#' @export
-font_ssp_black <- "Source Sans Pro Black"
 
 #' @rdname SourceSansPro
 #' @export
 font_ssp_light <- "Source Sans Pro Light"
-
-#' @rdname SourceSansPro
-#' @export
-font_ssp_extralight <- "Source Sans Pro ExtraLight"

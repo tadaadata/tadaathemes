@@ -26,7 +26,9 @@ library(tadaathemes)
 
 # List all themes in package
 pkg_themes <- getNamespaceExports("tadaathemes")
-pkg_themes <- sort(pkg_themes[grepl("^theme\\_", pkg_themes)])
+#pkg_themes <- sort(pkg_themes[grepl("^theme\\_", pkg_themes)])
+
+pkg_themes <- "theme_tadaa"
 
 # Test plots
 p_scatter <- ggplot(mtcars, aes(x = wt, y = mpg)) +

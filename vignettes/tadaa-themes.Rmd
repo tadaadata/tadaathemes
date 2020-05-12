@@ -13,6 +13,9 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+options(tadaathemes.loadfonts = TRUE)
+library(showtext)
+showtext_auto()
 # library(extrafont)
 # hrbrthemes::import_roboto_condensed()
 # tadaathemes::import_lato()
@@ -20,8 +23,6 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(ggplot2)
-
-options(tadaathemes.loadfonts = TRUE)
 library(tadaathemes)
 
 # List all themes in package

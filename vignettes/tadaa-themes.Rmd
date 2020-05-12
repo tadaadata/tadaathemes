@@ -14,11 +14,10 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 options(tadaathemes.loadfonts = TRUE)
-library(showtext)
-showtext_auto()
+
 # library(extrafont)
-# hrbrthemes::import_roboto_condensed()
-# tadaathemes::import_lato()
+hrbrthemes::import_roboto_condensed()
+tadaathemes::import_lato()
 ```
 
 ```{r setup}

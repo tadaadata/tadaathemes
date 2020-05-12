@@ -26,7 +26,8 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    showtext
+    showtext,
+    hrbrthemes
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

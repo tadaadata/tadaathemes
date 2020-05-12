@@ -13,6 +13,9 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(extrafont)
+hrbrthemes::import_roboto_condensed()
+tadaathemes::import_lato()
 ```
 
 ```{r setup}

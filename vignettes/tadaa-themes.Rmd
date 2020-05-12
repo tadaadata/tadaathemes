@@ -13,9 +13,9 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-library(extrafont)
-hrbrthemes::import_roboto_condensed()
-tadaathemes::import_lato()
+# library(extrafont)
+# hrbrthemes::import_roboto_condensed()
+# tadaathemes::import_lato()
 ```
 
 ```{r setup}
@@ -70,10 +70,9 @@ plot_with_theme <- function(p, theme = "theme_minimal") {
 for (theme in pkg_themes) {
   header <- paste("\n## ", theme, "\n\n")
   cat(header)
-  
-  cat("\n\n")
+
   print(plot_with_theme(p_scatter, theme = theme))
-  cat("\n\n")
+  cat("\n")
   print(plot_with_theme(p_histo, theme = theme))
   cat("\n")
   print(plot_with_theme(p_facets, theme = theme))

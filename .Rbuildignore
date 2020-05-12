@@ -9,3 +9,4 @@
 ^\.vscode$
 ^dev\.R$
 ^\.travis\.yml$
+^vignettes/articles$

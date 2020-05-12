@@ -7,7 +7,7 @@ on:
       - "pkgdown"
       - "NEWS.md"
       - "README.Rmd"
-      - "vignettes"
+      - "vignettes/**"
       - ".github/workflows/pkgdown.yaml"
 
 name: pkgdown

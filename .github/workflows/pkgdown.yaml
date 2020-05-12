@@ -51,6 +51,8 @@ jobs:
           brew tap homebrew/cask-fonts
           brew cask install font-lato
           brew cask install font-roboto-condensed
+          Rscript -e "extrafont::font_import(prompt = FALSE)"
+          Rscript -e "extrafont::fonts()"
 
       - name: Install package
         run: R CMD INSTALL .

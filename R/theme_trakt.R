@@ -191,7 +191,7 @@ theme_trakt <- function(
   # misc
   layout <- layout + theme(
     panel.background = element_rect(fill = "#1D1D1D"),
-    plot.background = element_rect(fill = "#1D1D1D"),
+    plot.background = element_rect(fill = "#1D1D1D", color = "#1D1D1D"),
     plot.margin = unit(plot.margin, "cm")
   )
 
@@ -217,7 +217,9 @@ colors_trakt <- c(
 #' @examples
 #' library(scales)
 #' scales::show_col(pal_trakt()(5))
-pal_trakt <- function() { scales::manual_pal(colors_trakt) }
+pal_trakt <- function() {
+  scales::manual_pal(colors_trakt)
+}
 
 #' Discrete color & fill scales based on the FT palette
 #'
@@ -226,7 +228,9 @@ pal_trakt <- function() { scales::manual_pal(colors_trakt) }
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname pal_trakt
 #' @export
-scale_colour_trakt <- function(...) { ggplot2::discrete_scale("colour", "trakt", pal_trakt(), ...) }
+scale_colour_trakt <- function(...) {
+  ggplot2::discrete_scale("colour", "trakt", pal_trakt(), ...)
+}
 
 #' @export
 #' @rdname pal_trakt
@@ -234,4 +238,6 @@ scale_color_trakt <- scale_colour_trakt
 
 #' @export
 #' @rdname pal_trakt
-scale_fill_trakt <- function(...) { ggplot2::discrete_scale("fill", "trakt", pal_trakt(), ...) }
+scale_fill_trakt <- function(...) {
+  ggplot2::discrete_scale("fill", "trakt", pal_trakt(), ...)
+}

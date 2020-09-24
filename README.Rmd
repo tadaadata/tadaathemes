@@ -68,6 +68,7 @@ Include a (compact?) gallery of themes (or maybe move them to a dedicated pkgdow
 
 ### Colors
 
+- [EmilHvitfeldt/paletteer](https://github.com/EmilHvitfeldt/paletteer): Collection of color palettes.
 - [sjmgarnier/viridisLite](https://github.com/sjmgarnier/viridisLite): Viridis is the (at least my) preferred set of color scales for continuous variables
 - [coolors](https://coolors.co/): Make your own color palettes easily (useful for qualitative palettes etc.).
 

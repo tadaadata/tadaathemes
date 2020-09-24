@@ -6,46 +6,38 @@
 #' You can find it on [Google Fonts](https://fonts.google.com/specimen/Source+Sans+Pro).
 #'
 #' @details
-#' This will add the fonts via [`sysfonts::font_add`], use
-#' [`showtext::showtext_auto()`] to use the fonts. Other steps may be necessary.
-#' Since this is an .otf fonts, and other fonts commonly bundled / used with R
-#' packages (e.g. `hrbrthemes`) are .ttf fonts, this needs to be handled
-#' differently, meaning that [`extrafont::font_import()`] will not work.
-#' I am currently not sure which steps specifically are required for this to work,
-#' but at least I can bundle the fonts for easier import.
+#'
+#' The font files shipped with this package were retrieved from
+#' `https://github.com/adobe-fonts/source-sans-pro/releases/download/3.028R/source-sans-3v028R.zip`.
 #'
 #' @name SourceSansPro
 #' @note Fonts are hard and platform-compatible font usage is hard to debug.
 #' @export
 import_source_sans <- function() {
-
   ssans_font_dir <- system.file("fonts", "source-sans-pro", package = "tadaathemes")
 
-
+  suppressWarnings(suppressMessages(
+    extrafont::font_import(ssans_font_dir, prompt = FALSE)
+  ))
   message(
     sprintf(
       "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      ssans_font_dir)
+      ssans_font_dir
+    )
   )
-
 }
 
 #' @rdname SourceSansPro
 #' @title Source Sans font name R variable aliases
-#' @description `font_ssp` == "`Source Sans Pro`" etc.
+#' @description `font_ssp` == "`Source Sans 3`" etc.
 #' @format length 1 character vector
 #' @export
-font_ssp <- "Source Sans Pro"
+font_ssp <- "Source Sans 3"
 
 #' @rdname SourceSansPro
 #' @export
-font_ssp_semibold <- "Source Sans Pro Semibold"
+font_ssp_semibold <- "Source Sans 3 Semibold"
 
 #' @rdname SourceSansPro
 #' @export
-font_ssp_bold <- "Source Sans Pro Bold"
-
-
-#' @rdname SourceSansPro
-#' @export
-font_ssp_light <- "Source Sans Pro Light"
+font_ssp_light <- "Source Sans 3 Thin"

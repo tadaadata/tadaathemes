@@ -78,6 +78,8 @@ dedicated pkgdown article)
 
 ### Colors
 
+  - [EmilHvitfeldt/paletteer](https://github.com/EmilHvitfeldt/paletteer):
+    Collection of color palettes.
   - [sjmgarnier/viridisLite](https://github.com/sjmgarnier/viridisLite):
     Viridis is the (at least my) preferred set of color scales for
     continuous variables

@@ -18,7 +18,6 @@
 #' @export
 #' @importFrom extrafont font_import
 import_lato <- function() {
-
   lato_font_dir <- system.file("fonts", "lato", package = "tadaathemes")
 
   suppressWarnings(suppressMessages(
@@ -28,9 +27,9 @@ import_lato <- function() {
   message(
     sprintf(
       "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      lato_font_dir)
+      lato_font_dir
+    )
   )
-
 }
 
 #' @rdname Lato

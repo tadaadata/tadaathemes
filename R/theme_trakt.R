@@ -26,7 +26,7 @@
 #' p + theme_trakt()
 #'
 #' p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
-#' geom_line(stat = "smooth", method = lm, formula = y ~ x) +
+#'   geom_line(stat = "smooth", method = lm, formula = y ~ x) +
 #'   geom_point(size = 2) +
 #'   labs(
 #'     title = "The ggplot we've all seen",
@@ -37,14 +37,13 @@
 #' p + theme_trakt()
 #' }
 theme_trakt <- function(
-  title.size = 16, text.size = 14, legend.position = "top",
-  show.axis = FALSE, show.grid = TRUE,
-  plot.margin = c(.7, .7, .7, .7),
-  font.base = font_lato,
-  font.title = font_lato_semibold,
-  font.subtitle = font_lato,
-  font.caption = font_lato_light
-  ) {
+                        title.size = 16, text.size = 14, legend.position = "top",
+                        show.axis = FALSE, show.grid = TRUE,
+                        plot.margin = c(.7, .7, .7, .7),
+                        font.base = font_lato,
+                        font.title = font_lato_semibold,
+                        font.subtitle = font_lato,
+                        font.caption = font_lato_light) {
 
   # baseline
   linecolor <- "#999999"
@@ -126,15 +125,14 @@ theme_trakt <- function(
   # title
   layout <- layout + theme(plot.title = element_text(
     family = font.title,
-    #face = "plain",
+    # face = "plain",
     color = "#FFFFFF"
-  )
-  )
+  ))
 
   # subtitle
   layout <- layout + theme(plot.subtitle = element_text(
     family = font.subtitle,
-    #face = "plain",
+    # face = "plain",
     color = "#999999",
     margin = margin(b = 15),
     # debug = TRUE
@@ -144,7 +142,7 @@ theme_trakt <- function(
   layout <- layout + theme(plot.caption = element_text(
     family = font.caption,
     size = text.size - 2,
-    #face = "plain",
+    # face = "plain",
     color = "#999999",
     margin = margin(t = 5)
   ))

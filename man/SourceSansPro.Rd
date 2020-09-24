@@ -6,13 +6,10 @@
 \alias{import_source_sans}
 \alias{font_ssp}
 \alias{font_ssp_semibold}
-\alias{font_ssp_bold}
 \alias{font_ssp_light}
 \title{Import Source Sans font for use in charts}
 \format{
 length 1 character vector
-
-An object of class \code{character} of length 1.
 
 An object of class \code{character} of length 1.
 
@@ -25,8 +22,6 @@ font_ssp
 
 font_ssp_semibold
 
-font_ssp_bold
-
 font_ssp_light
 }
 \description{
@@ -35,16 +30,11 @@ Source Sans Pro is Copyright 2010, 2012 Adobe Systems Incorporated
 (\href{https://www.fontsquirrel.com/license/source-sans-pro}{License}).
 You can find it on \href{https://fonts.google.com/specimen/Source+Sans+Pro}{Google Fonts}.
 
-\code{font_ssp} == "\verb{Source Sans Pro}" etc.
+\code{font_ssp} == "\verb{Source Sans 3}" etc.
 }
 \details{
-This will add the fonts via \code{\link[sysfonts:font_add]{sysfonts::font_add}}, use
-\code{\link[showtext:showtext_auto]{showtext::showtext_auto()}} to use the fonts. Other steps may be necessary.
-Since this is an .otf fonts, and other fonts commonly bundled / used with R
-packages (e.g. \code{hrbrthemes}) are .ttf fonts, this needs to be handled
-differently, meaning that \code{\link[extrafont:font_import]{extrafont::font_import()}} will not work.
-I am currently not sure which steps specifically are required for this to work,
-but at least I can bundle the fonts for easier import.
+The font files shipped with this package were retrieved from
+\verb{https://github.com/adobe-fonts/source-sans-pro/releases/download/3.028R/source-sans-3v028R.zip}.
 }
 \note{
 Fonts are hard and platform-compatible font usage is hard to debug.

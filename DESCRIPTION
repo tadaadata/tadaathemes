@@ -21,7 +21,6 @@ Imports:
     extrafont,
     ggplot2,
     magrittr,
-    sysfonts,
     scales
 Suggests: 
     knitr,

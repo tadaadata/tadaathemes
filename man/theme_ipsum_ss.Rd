@@ -9,11 +9,11 @@ theme_ipsum_ss(
   base_size = 10.5,
   plot_title_family = if (.Platform$OS.type == "windows") "Source Sans Pro" else
     "Source Sans 3",
-  plot_title_size = 18,
+  plot_title_size = 19,
   plot_title_face = "bold",
   plot_title_margin = 10,
   subtitle_family = if (.Platform$OS.type == "windows") "Source Sans Thin" else
-    "Source Sans 3 Thin",
+    "Source Sans 3 Light",
   subtitle_size = 13,
   subtitle_face = "plain",
   subtitle_margin = 15,
@@ -21,16 +21,16 @@ theme_ipsum_ss(
   strip_text_size = 12,
   strip_text_face = "plain",
   caption_family = if (.Platform$OS.type == "windows") "Source Sans Thin" else
-    "Source Sans 3 Thin",
-  caption_size = 9,
+    "Source Sans 3 Light",
+  caption_size = 10,
   caption_face = "plain",
   caption_margin = 10,
   axis_text_size = base_size,
   axis_title_family = base_family,
-  axis_title_size = 9,
+  axis_title_size = 11,
   axis_title_face = "plain",
   axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30),
+  plot_margin = margin(20, 20, 20, 20),
   grid_col = "#cccccc",
   grid = TRUE,
   axis_col = "#cccccc",
@@ -91,7 +91,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
-       subtitle="A plot that is only useful for demonstration purposes",
+       subtitle="A plot that is only useful for demonstration purposes and the letter g",
        caption="Brought to you by the letter 'g'") +
   theme_ipsum_ss()
 

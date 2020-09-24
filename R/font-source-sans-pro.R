@@ -17,27 +17,10 @@
 #' @name SourceSansPro
 #' @note Fonts are hard and platform-compatible font usage is hard to debug.
 #' @export
-#' @importFrom sysfonts font_add
 import_source_sans <- function() {
 
   ssans_font_dir <- system.file("fonts", "source-sans-pro", package = "tadaathemes")
 
-  sysfonts::font_add(
-    family = "Source Sans Pro Light",
-    regular = file.path(ssans_font_dir, "SourceSansPro-Light.otf")
-  )
-  sysfonts::font_add(
-    family = "Source Sans Pro",
-    regular = file.path(ssans_font_dir, "SourceSansPro-Regular.otf")
-  )
-  sysfonts::font_add(
-    family = "Source Sans Pro Semibold",
-    regular = file.path(ssans_font_dir, "SourceSansPro-Semibold.otf")
-  )
-  sysfonts::font_add(
-    family = "Source Sans Pro Bold",
-    regular = file.path(ssans_font_dir, "SourceSansPro-Bold.otf")
-  )
 
   message(
     sprintf(

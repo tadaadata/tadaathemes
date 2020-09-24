@@ -28,9 +28,9 @@ library(tadaathemes)
 
 # List all themes in package
 pkg_themes <- getNamespaceExports("tadaathemes")
-#pkg_themes <- sort(pkg_themes[grepl("^theme\\_", pkg_themes)])
+pkg_themes <- sort(pkg_themes[grepl("^theme\\_", pkg_themes)])
 
-pkg_themes <- "theme_trakt"
+# pkg_themes <- "theme_trakt"
 
 # Test plots
 p_scatter <- ggplot(mtcars, aes(x = wt, y = mpg)) +
@@ -70,7 +70,7 @@ plot_with_theme <- function(p, theme = "theme_minimal") {
 
 # Themes
 
-```{r themes, fig.height=4.3, fig.width=7,fig.align='center', results='asis'}
+```{r themes, fig.height=5.5, fig.width=9, fig.align='center', results='asis'}
 for (theme in pkg_themes) {
   header <- paste("\n## ", theme, "\n\n")
   cat(header)

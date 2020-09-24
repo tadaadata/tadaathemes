@@ -61,7 +61,7 @@ p <- ggplot(iris, aes(x = Sepal.Width)) +
 p + theme_trakt()
 
 p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
-geom_line(stat = "smooth", method = lm, formula = y ~ x) +
+  geom_line(stat = "smooth", method = lm, formula = y ~ x) +
   geom_point(size = 2) +
   labs(
     title = "The ggplot we've all seen",

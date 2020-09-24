@@ -7,12 +7,12 @@
 theme_ipsum_ss(
   base_family = "Source Sans 3",
   base_size = 10.5,
-  plot_title_family = if (.Platform$OS.type == "windows") "Source Sans Pro" else
+  plot_title_family = if (.Platform$OS.type == "windows") "Source Sans 3" else
     "Source Sans 3",
   plot_title_size = 19,
   plot_title_face = "bold",
   plot_title_margin = 10,
-  subtitle_family = if (.Platform$OS.type == "windows") "Source Sans Thin" else
+  subtitle_family = if (.Platform$OS.type == "windows") "Source Sans 3 Light" else
     "Source Sans 3 Light",
   subtitle_size = 13,
   subtitle_face = "plain",
@@ -20,7 +20,7 @@ theme_ipsum_ss(
   strip_text_family = base_family,
   strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family = if (.Platform$OS.type == "windows") "Source Sans Thin" else
+  caption_family = if (.Platform$OS.type == "windows") "Source Sans Pro Light" else
     "Source Sans 3 Light",
   caption_size = 10,
   caption_face = "plain",
@@ -89,25 +89,29 @@ library(dplyr)
 # seminal scatterplot
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-       title="Seminal ggplot2 scatterplot example",
-       subtitle="A plot that is only useful for demonstration purposes and the letter g",
-       caption="Brought to you by the letter 'g'") +
+  labs(
+    x = "Fuel efficiency (mpg)", y = "Weight (tons)",
+    title = "Seminal ggplot2 scatterplot example",
+    subtitle = "A plot that is only useful for demonstration purposes and the letter g",
+    caption = "Brought to you by the letter 'g'"
+  ) +
   theme_ipsum_ss()
 
 # seminal bar chart
 
-update_geom_font_defaults(family=font_ssp)
+update_geom_font_defaults(family = font_ssp)
 
 count(mpg, class) \%>\%
   ggplot(aes(class, n)) +
   geom_col() +
-  geom_text(aes(label=n), nudge_y=3) +
-  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
-       title="Seminal ggplot2 bar chart example",
-       subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") +
-  theme_ipsum_ss(grid="Y") +
-  theme(axis.text.y=element_blank())
+  geom_text(aes(label = n), nudge_y = 3) +
+  labs(
+    x = "Fuel efficiency (mpg)", y = "Weight (tons)",
+    title = "Seminal ggplot2 bar chart example",
+    subtitle = "A plot that is only useful for demonstration purposes",
+    caption = "Brought to you by the letter 'g'"
+  ) +
+  theme_ipsum_ss(grid = "Y") +
+  theme(axis.text.y = element_blank())
 }
 }

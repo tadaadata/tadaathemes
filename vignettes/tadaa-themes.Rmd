@@ -30,8 +30,6 @@ library(tadaathemes)
 pkg_themes <- getNamespaceExports("tadaathemes")
 pkg_themes <- sort(pkg_themes[grepl("^theme\\_", pkg_themes)])
 
-# pkg_themes <- "theme_trakt"
-
 # Test plots
 p_scatter <- ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_line(stat = "smooth", method = lm, formula = y ~ x) +

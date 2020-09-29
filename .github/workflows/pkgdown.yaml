@@ -46,6 +46,9 @@ jobs:
           remotes::install_cran("pkgdown")
         shell: Rscript {0}
 
+      - name: Install package
+        run: R CMD INSTALL .
+
       - name: Install fonts
         run: |
           # brew tap homebrew/cask-fonts
@@ -57,9 +60,6 @@ jobs:
           Rscript -e "tadaathemes::import_source_sans()"
           Rscript -e "extrafont::font_import(prompt = FALSE)"
           Rscript -e "extrafont::fonts()"
-
-      - name: Install package
-        run: R CMD INSTALL .
 
       - name: Deploy package
         run: pkgdown::deploy_to_branch(new_process = FALSE)

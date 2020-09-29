@@ -48,10 +48,13 @@ jobs:
 
       - name: Install fonts
         run: |
-          brew tap homebrew/cask-fonts
-          brew cask install font-lato
-          brew cask install font-roboto-condensed
-          brew cask install font-source-sans-pro
+          # brew tap homebrew/cask-fonts
+          # brew cask install font-lato
+          # brew cask install font-roboto-condensed
+          # brew cask install font-source-sans-pro
+          Rscript -e "hrbrthemes::import_roboto_condensed()"
+          Rscript -e "tadaathemes::import_lato()"
+          Rscript -e "tadaathemes::import_source_sans()"
           Rscript -e "extrafont::font_import(prompt = FALSE)"
           Rscript -e "extrafont::fonts()"
 

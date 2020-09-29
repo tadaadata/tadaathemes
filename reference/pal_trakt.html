@@ -134,22 +134,22 @@ See pal_trakt()." />
 <p>See <code>pal_trakt()</code>.</p>
     </div>
 
-    <pre class="usage"><span class='no'>colors_trakt</span>
+    <pre class="usage"><span class='va'>colors_trakt</span>
 
-<span class='fu'>pal_trakt</span>()
+<span class='fu'>pal_trakt</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>scale_colour_trakt</span>(<span class='no'>...</span>)
+<span class='fu'>scale_colour_trakt</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>scale_color_trakt</span>(<span class='no'>...</span>)
+<span class='fu'>scale_color_trakt</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>scale_fill_trakt</span>(<span class='no'>...</span>)</pre>
+<span class='fu'>scale_fill_trakt</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>...</th>
-      <td><p>Arguments passed on to <code><a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a></code></p><dl'>
+      <td><p>Arguments passed on to <code><a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a></code></p><dl>
     <dt><code>aesthetics</code></dt><dd><p>The names of the aesthetics that this scale works with.</p></dd>
     <dt><code>scale_name</code></dt><dd><p>The name of the scale that should be used for error messages
 associated with this scale.</p></dd>
@@ -177,13 +177,19 @@ transformation object</p></li>
 <li><p>A function that takes the breaks as input and returns labels
 as output</p></li>
 </ul></p></dd>
-    <dt><code>limits</code></dt><dd><p>A character vector that defines possible values of the scale
-and their order.</p></dd>
+    <dt><code>limits</code></dt><dd><p>One of:
+<ul>
+<li><p><code>NULL</code> to use the default scale values</p></li>
+<li><p>A character vector that defines possible values of the scale and their
+order</p></li>
+<li><p>A function that accepts the existing (automatic) values and returns
+new ones</p></li>
+</ul></p></dd>
     <dt><code>na.translate</code></dt><dd><p>Unlike continuous scales, discrete scales can easily show
 missing values, and do so by default. If you want to remove missing values
 from a discrete scale, specify <code>na.translate = FALSE</code>.</p></dd>
-    <dt><code>na.value</code></dt><dd><p>If <code>na.translate = TRUE</code>, what value aesthetic
-value should missing be displayed as? Does not apply to position scales
+    <dt><code>na.value</code></dt><dd><p>If <code>na.translate = TRUE</code>, what aesthetic value should the
+missing values be displayed as? Does not apply to position scales
 where <code>NA</code> is always placed at the far right.</p></dd>
     <dt><code>drop</code></dt><dd><p>Should unused factor levels be omitted from the scale?
 The default, <code>TRUE</code>, uses the levels that appear in the data;
@@ -201,8 +207,9 @@ The default, <code>TRUE</code>, uses the levels that appear in the data;
     <p>An object of class <code>character</code> of length 5.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>scales</span>)
-<span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'>pal_trakt</span>()(<span class='fl'>5</span>))</div><div class='img'><img src='pal_trakt-1.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
+<span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span><span class='op'>(</span><span class='fu'>pal_trakt</span><span class='op'>(</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='pal_trakt-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -218,7 +225,7 @@ The default, <code>TRUE</code>, uses the levels that appear in the data;
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

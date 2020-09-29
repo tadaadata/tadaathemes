@@ -44,7 +44,7 @@
 (http://www.adobe.com/), with Reserved Font Name ‘Source’.
 (License).
 You can find it on Google Fonts.
-font_ssp == &quot;Source Sans Pro&quot; etc." />
+font_ssp == &quot;Source Sans 3&quot; etc." />
 
 
 
@@ -137,18 +137,16 @@ font_ssp == &quot;Source Sans Pro&quot; etc." />
 (http://www.adobe.com/), with Reserved Font Name ‘Source’.
 (<a href='https://www.fontsquirrel.com/license/source-sans-pro'>License</a>).
 You can find it on <a href='https://fonts.google.com/specimen/Source+Sans+Pro'>Google Fonts</a>.</p>
-<p><code>font_ssp</code> == "<code>Source Sans Pro</code>" etc.</p>
+<p><code>font_ssp</code> == "<code>Source Sans 3</code>" etc.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>import_source_sans</span>()
+    <pre class="usage"><span class='fu'>import_source_sans</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='no'>font_ssp</span>
+<span class='va'>font_ssp</span>
 
-<span class='no'>font_ssp_semibold</span>
+<span class='va'>font_ssp_semibold</span>
 
-<span class='no'>font_ssp_bold</span>
-
-<span class='no'>font_ssp_light</span></pre>
+<span class='va'>font_ssp_light</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
@@ -156,16 +154,14 @@ You can find it on <a href='https://fonts.google.com/specimen/Source+Sans+Pro'>G
     <p>length 1 character vector</p>
 <p>An object of class <code>character</code> of length 1.</p>
 <p>An object of class <code>character</code> of length 1.</p>
-<p>An object of class <code>character</code> of length 1.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This will add the fonts via <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add.html'>sysfonts::font_add</a></code>, use
-<code><a href='https://rdrr.io/pkg/showtext/man/showtext_auto.html'>showtext::showtext_auto()</a></code> to use the fonts. Other steps may be necessary.
-Since this is an .otf fonts, and other fonts commonly bundled / used with R
-packages (e.g. <code>hrbrthemes</code>) are .ttf fonts, this needs to be handled
-differently, meaning that <code><a href='https://rdrr.io/pkg/extrafont/man/font_import.html'>extrafont::font_import()</a></code> will not work.
-I am currently not sure which steps specifically are required for this to work,
-but at least I can bundle the fonts for easier import.</p>
+    <p>The font files shipped with this package were retrieved from
+<code>https://github.com/adobe-fonts/source-sans-pro/releases/download/3.028R/source-sans-3v028R.zip</code>.</p>
+<p>Unfortunately there's some confusion with the name of the base font family,
+which is "Source Sans Pro" on my <code>brew</code> installed fonts on macOS, but it's
+"Source Sans 3" for the GitHub-installed version on a Linux machine.
+I have not yet figured out how to handle this.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Fonts are hard and platform-compatible font usage is hard to debug.</p>
@@ -185,7 +181,7 @@ but at least I can bundle the fonts for easier import.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

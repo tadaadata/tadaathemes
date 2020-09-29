@@ -61,19 +61,19 @@
 #'   theme(axis.text.y = element_blank())
 #' }
 theme_ipsum_ss <- function(
-                           base_family = "Source Sans 3", base_size = 10.5,
-                           plot_title_family = if (.Platform$OS.type == "windows") "Source Sans 3" else "Source Sans 3",
+                           base_family = font_ssp, base_size = 10.5,
+                           plot_title_family = font_ssp,
                            plot_title_size = 19,
                            plot_title_face = "bold",
                            plot_title_margin = 10,
-                           subtitle_family = if (.Platform$OS.type == "windows") "Source Sans 3 Light" else "Source Sans 3 Light",
+                           subtitle_family = font_ssp_light,
                            subtitle_size = 13,
                            subtitle_face = "plain",
                            subtitle_margin = 15,
                            strip_text_family = base_family,
                            strip_text_size = 12,
                            strip_text_face = "plain",
-                           caption_family = if (.Platform$OS.type == "windows") "Source Sans Pro Light" else "Source Sans 3 Light",
+                           caption_family = font_ssp_light,
                            caption_size = 10,
                            caption_face = "plain", caption_margin = 10,
                            axis_text_size = base_size,

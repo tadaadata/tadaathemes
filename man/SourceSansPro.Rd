@@ -35,6 +35,11 @@ You can find it on \href{https://fonts.google.com/specimen/Source+Sans+Pro}{Goog
 \details{
 The font files shipped with this package were retrieved from
 \verb{https://github.com/adobe-fonts/source-sans-pro/releases/download/3.028R/source-sans-3v028R.zip}.
+
+Unfortunately there's some confusion with the name of the base font family,
+which is "Source Sans Pro" on my \code{brew} installed fonts on macOS, but it's
+"Source Sans 3" for the GitHub-installed version on a Linux machine.
+I have not yet figured out how to handle this.
 }
 \note{
 Fonts are hard and platform-compatible font usage is hard to debug.

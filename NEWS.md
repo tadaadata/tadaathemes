@@ -1,5 +1,6 @@
 # tadaathemes 0.0.1
 
+* Add `theme_ipsum_ss`, a `hrbrthemes::theme_ipsum()` derivative using the `Source Sans Pro` font family, which is also (partially) included in `inst/fonts/source-sans-pro`. The font family name is "Source Sans 3" for some, though.
 * Add colors and scale functions for `theme_trakt`.
 * Bundle fonts Source Sans Pro and Lato (experimentally). The latter is used in `theme_trakt()`.
 * Add WIP implementation of `theme_trakt()`

@@ -156,11 +156,14 @@
   axis_title_face <span class='op'>=</span> <span class='st'>"plain"</span>,
   axis_title_just <span class='op'>=</span> <span class='st'>"rt"</span>,
   plot_margin <span class='op'>=</span> <span class='fu'>margin</span><span class='op'>(</span><span class='fl'>20</span>, <span class='fl'>20</span>, <span class='fl'>20</span>, <span class='fl'>20</span><span class='op'>)</span>,
+  panel_spacing <span class='op'>=</span> <span class='fu'>grid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/unit.html'>unit</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
   grid_col <span class='op'>=</span> <span class='st'>"#cccccc"</span>,
   grid <span class='op'>=</span> <span class='cn'>TRUE</span>,
   axis_col <span class='op'>=</span> <span class='st'>"#cccccc"</span>,
   axis <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  ticks <span class='op'>=</span> <span class='cn'>FALSE</span>
+  ticks <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  legend_position <span class='op'>=</span> <span class='st'>"top"</span>,
+  plot_title_position <span class='op'>=</span> <span class='st'>"plot"</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -200,11 +203,15 @@
     </tr>
     <tr>
       <th>axis_title_just</th>
-      <td><p>axis title font justification, one of <code>[blmcrt]</code></p></td>
+      <td><p>axis title font justificationk one of <code>[blmcrt]</code></p></td>
     </tr>
     <tr>
       <th>plot_margin</th>
       <td><p>plot margin (specify with ggplot2::margin)</p></td>
+    </tr>
+    <tr>
+      <th>panel_spacing</th>
+      <td><p>panel spacing (use <code>unit()</code>)</p></td>
     </tr>
     <tr>
       <th>grid_col</th>
@@ -225,6 +232,16 @@
     <tr>
       <th>ticks</th>
       <td><p>ticks if <code>TRUE</code> add ticks</p></td>
+    </tr>
+    <tr>
+      <th>legend_position</th>
+      <td><p>Same as <code>legend.position</code> in <code><a href='https://ggplot2.tidyverse.org/reference/theme.html'>ggplot2::theme()</a></code>, defaulting
+to <code>"top"</code>.</p></td>
+    </tr>
+    <tr>
+      <th>plot_title_position</th>
+      <td><p>Same as <code>plot.title.position</code> in <code><a href='https://ggplot2.tidyverse.org/reference/theme.html'>ggplot2::theme()</a></code>,
+defaulting to <code>"plot"</code>.</p></td>
     </tr>
     </table>
 

@@ -28,11 +28,14 @@ theme_ipsum_ss(
   axis_title_face = "plain",
   axis_title_just = "rt",
   plot_margin = margin(20, 20, 20, 20),
+  panel_spacing = grid::unit(2, "lines"),
   grid_col = "#cccccc",
   grid = TRUE,
   axis_col = "#cccccc",
   axis = FALSE,
-  ticks = FALSE
+  ticks = FALSE,
+  legend_position = "top",
+  plot_title_position = "plot"
 )
 }
 \arguments{
@@ -52,9 +55,11 @@ theme_ipsum_ss(
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justification, one of \verb{[blmcrt]}}
+\item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
 
 \item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
+
+\item{panel_spacing}{panel spacing (use \code{unit()})}
 
 \item{grid_col}{grid color}
 
@@ -65,6 +70,12 @@ theme_ipsum_ss(
 \item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
 \item{ticks}{ticks if \code{TRUE} add ticks}
+
+\item{legend_position}{Same as \code{legend.position} in \code{ggplot2::theme()}, defaulting
+to \code{"top"}.}
+
+\item{plot_title_position}{Same as \code{plot.title.position} in \code{ggplot2::theme()},
+defaulting to \code{"plot"}.}
 }
 \description{
 This is a verbatim copy of \verb{[hrbrthemes::theme_ipsum_ps]} with "Source Sans Pro" dropped in.

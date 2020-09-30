@@ -18,14 +18,19 @@
 #' @param strip_text_family,strip_text_face,strip_text_size facet label font family, face and size
 #' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
-#' @param axis_title_just axis title font justification, one of `[blmcrt]`
+#' @param axis_title_just axis title font justificationk one of `[blmcrt]`
 #' @param axis_text_size font size of axis text
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
+#' @param panel_spacing panel spacing (use `unit()`)
 #' @param grid_col grid color
 #' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
 #' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
+#' @param legend_position Same as `legend.position` in `ggplot2::theme()`, defaulting
+#' to `"top"`.
+#' @param plot_title_position Same as `plot.title.position` in `ggplot2::theme()`,
+#' defaulting to `"plot"`.
 #' @export
 #' @examples
 #' \dontrun{
@@ -82,12 +87,25 @@ theme_ipsum_ss <- function(
                            axis_title_face = "plain",
                            axis_title_just = "rt",
                            plot_margin = margin(20, 20, 20, 20),
+                           panel_spacing = grid::unit(2, "lines"),
                            grid_col = "#cccccc", grid = TRUE,
-                           axis_col = "#cccccc", axis = FALSE, ticks = FALSE) {
+                           axis_col = "#cccccc", axis = FALSE,
+                           ticks = FALSE,
+                           legend_position = "top",
+                           plot_title_position = "plot"
+  ) {
   ret <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
 
   ret <- ret + theme(legend.background = element_blank())
   ret <- ret + theme(legend.key = element_blank())
+
+  ret <- ret + theme(plot.margin = plot_margin)
+  ret <- ret + theme(panel.spacing = panel_spacing)
+
+  ret <- ret + theme(legend.position = legend_position)
+  ret <- ret + theme(plot.title.position = plot_title_position)
+
+
 
   if (inherits(grid, "character") | grid == TRUE) {
     ret <- ret + theme(panel.grid = element_line(color = grid_col, size = 0.2))
@@ -102,6 +120,12 @@ theme_ipsum_ss <- function(
     }
   } else {
     ret <- ret + theme(panel.grid = element_blank())
+    ret <- ret + theme(panel.grid.major  = element_blank())
+    ret <- ret + theme(panel.grid.major.x  = element_blank())
+    ret <- ret + theme(panel.grid.major.y  = element_blank())
+    ret <- ret + theme(panel.grid.minor  = element_blank())
+    ret <- ret + theme(panel.grid.minor.x  = element_blank())
+    ret <- ret + theme(panel.grid.minor.y  = element_blank())
   }
 
   if (inherits(axis, "character") | axis == TRUE) {
@@ -140,8 +164,10 @@ theme_ipsum_ss <- function(
   xj <- switch(tolower(substr(axis_title_just, 1, 1)), b = 0, l = 0, m = 0.5, c = 0.5, r = 1, t = 1)
   yj <- switch(tolower(substr(axis_title_just, 2, 2)), b = 0, l = 0, m = 0.5, c = 0.5, r = 1, t = 1)
 
+  ret <- ret + theme(axis.text = element_text(size = axis_text_size, margin = margin(t = 0, r = 0)))
   ret <- ret + theme(axis.text.x = element_text(size = axis_text_size, margin = margin(t = 0)))
   ret <- ret + theme(axis.text.y = element_text(size = axis_text_size, margin = margin(r = 0)))
+
   ret <- ret + theme(axis.title = element_text(size = axis_title_size, family = axis_title_family))
   ret <- ret + theme(axis.title.x = element_text(
     hjust = xj, size = axis_title_size,
@@ -155,11 +181,12 @@ theme_ipsum_ss <- function(
     hjust = yj, size = axis_title_size, angle = 90,
     family = axis_title_family, face = axis_title_face
   ))
+
   ret <- ret + theme(strip.text = element_text(
     hjust = 0, size = strip_text_size,
     face = strip_text_face, family = strip_text_family
   ))
-  ret <- ret + theme(panel.spacing = grid::unit(2, "lines"))
+
   ret <- ret + theme(plot.title = element_text(
     hjust = 0, size = plot_title_size,
     margin = margin(b = plot_title_margin),
@@ -175,37 +202,6 @@ theme_ipsum_ss <- function(
     margin = margin(t = caption_margin),
     family = caption_family, face = caption_face
   ))
-  ret <- ret + theme(plot.margin = plot_margin)
 
   ret
 }
-
-#' Import Source Sans font for use in charts
-#'
-#' Source Sans is Copyright 2015 Impallari Type and licensed under the
-#' SIL Open Font License, Version 1.1
-#'
-#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
-#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
-#' devices. If you are running under Windows, the package calls the same function
-#' to register non-core fonts with the Windows graphics device.
-#'
-#' @md
-#' @note This will take care of ensuring PDF/PostScript usage. The location of the
-#'   font directory is displayed after the base import is complete. It is highly
-#'   recommended that you install them on your system the same way you would any
-#'   other font you wish to use in other programs.
-#' @export
-# import_public_sans <- function() {
-#
-#   pub_font_dir <- system.file("fonts", "public-sans", package="hrbrthemes")
-#
-#   suppressWarnings(suppressMessages(extrafont::font_import(pub_font_dir, prompt=FALSE)))
-#
-#   message(
-#     sprintf(
-#       "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-#       pub_font_dir)
-#   )
-#
-# }

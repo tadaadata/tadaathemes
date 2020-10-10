@@ -138,7 +138,7 @@ theme_tadaark <- function(title.size = 16, text.size = 14, legend.position = "to
   # misc
   layout <- layout + theme(
     panel.background = element_rect(fill = "#181818"),
-    plot.background = element_rect(fill = "#181818"), # or: #1a1a1a; OR #191919?!
+    plot.background = element_rect(fill = "#181818", color = "#181818"), # or: #1a1a1a; OR #191919?!
     plot.margin = unit(plot.margin, "cm")
   )
 

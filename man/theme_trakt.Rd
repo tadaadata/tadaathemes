@@ -11,6 +11,7 @@ theme_trakt(
   show.axis = FALSE,
   show.grid = TRUE,
   plot.margin = c(0.7, 0.7, 0.7, 0.7),
+  plot.title.position = "plot",
   font.base = font_lato,
   font.title = font_lato_semibold,
   font.subtitle = font_lato,
@@ -30,6 +31,8 @@ theme_trakt(
 
 \item{plot.margin}{margin around entire plot (unit with the sizes of the
 top, right, bottom, and left margins).}
+
+\item{plot.title.position}{Defaults to \code{"plot"} for left-aligned title.}
 
 \item{font.base, font.title, font.caption, font.subtitle}{Default font
 family is \code{"Lato"}, but trakt.tv uses \code{"Proxima Nova Semibold"} -

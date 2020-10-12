@@ -8,6 +8,7 @@
 #' @param font.base,font.title,font.caption,font.subtitle Default font
 #' family is `"Lato"`, but trakt.tv uses `"Proxima Nova Semibold"` -
 #' which is a neat font, but I can neither afford nor supply it with this package.
+#' @param plot.title.position Defaults to `"plot"` for left-aligned title.
 #' @note See [`sysfonts::font_add_google`] and the `showtext` package to add
 #' the Lato font.
 #' @import ggplot2
@@ -37,13 +38,15 @@
 #' p + theme_trakt()
 #' }
 theme_trakt <- function(
-                        title.size = 16, text.size = 14, legend.position = "top",
-                        show.axis = FALSE, show.grid = TRUE,
-                        plot.margin = c(.7, .7, .7, .7),
-                        font.base = font_lato,
-                        font.title = font_lato_semibold,
-                        font.subtitle = font_lato,
-                        font.caption = font_lato_light) {
+  title.size = 16, text.size = 14, legend.position = "top",
+  show.axis = FALSE, show.grid = TRUE,
+  plot.margin = c(.7, .7, .7, .7),
+  plot.title.position = "plot",
+  font.base = font_lato,
+  font.title = font_lato_semibold,
+  font.subtitle = font_lato,
+  font.caption = font_lato_light
+) {
 
   # baseline
   linecolor <- "#999999"
@@ -123,11 +126,14 @@ theme_trakt <- function(
   }
 
   # title
-  layout <- layout + theme(plot.title = element_text(
-    family = font.title,
-    # face = "plain",
-    color = "#FFFFFF"
-  ))
+  layout <- layout + theme(
+    plot.title.position = plot.title.position,
+    plot.title = element_text(
+      family = font.title,
+      # face = "plain",
+      color = "#FFFFFF"
+    )
+  )
 
   # subtitle
   layout <- layout + theme(plot.subtitle = element_text(

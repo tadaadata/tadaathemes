@@ -40,7 +40,7 @@ import_source_sans <- function() {
 font_ssp <- switch(
   Sys.info()[["sysname"]],
   "Darwin" = "Source Sans Pro",
-  "linux" = "Source Sans 3"
+  "Linux" = "Source Sans 3"
 )
 
 #' @rdname SourceSansPro
@@ -48,7 +48,7 @@ font_ssp <- switch(
 font_ssp_semibold <- switch(
   Sys.info()[["sysname"]],
   "Darwin" = "Source Sans Pro Semibold",
-  "linux" = "Source Sans 3 Semibold"
+  "Linux" = "Source Sans 3 Semibold"
 )
 
 #' @rdname SourceSansPro
@@ -56,5 +56,5 @@ font_ssp_semibold <- switch(
 font_ssp_light <- switch(
   Sys.info()[["sysname"]],
   "Darwin" = "Source Sans Pro Light",
-  "linux" = "Source Sans 3 Light"
+  "Linux" = "Source Sans 3 Light"
 )

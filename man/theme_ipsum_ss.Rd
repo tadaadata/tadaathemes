@@ -26,7 +26,7 @@ theme_ipsum_ss(
   axis_title_family = base_family,
   axis_title_size = 11,
   axis_title_face = "plain",
-  axis_title_just = "rt",
+  axis_title_just = "m",
   plot_margin = margin(20, 20, 20, 20),
   panel_spacing = grid::unit(1.5, "lines"),
   grid_col = "#cccccc",
